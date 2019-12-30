@@ -1,5 +1,5 @@
 # OmniLog
-Short description and motivation.
+通用日志记录(Rails engine)
 
 ## Usage
 How to use my plugin.
@@ -8,17 +8,12 @@ How to use my plugin.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'omni_log'
+gem 'omni_log', git: "git@github.com:as181920/omni_log.git", branch: "master"
 ```
 
 And then execute:
 ```bash
 $ bundle
-```
-
-Or install it yourself as:
-```bash
-$ gem install omni_log
 ```
 
 ## Contributing
