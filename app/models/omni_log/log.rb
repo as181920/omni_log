@@ -6,6 +6,8 @@ module OmniLog
 
     before_validation :set_initial_attrs, on: :create
 
+    scope :ordered, -> { order(occurred_at: :asc) }
+
     private
       def set_initial_attrs
         self.occurred_at ||= DateTime.now
