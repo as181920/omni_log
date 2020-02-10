@@ -10,7 +10,7 @@ module OmniLog
 
     private
       def set_initial_attrs
-        self.occurred_at ||= DateTime.now
+        self.occurred_at ||= DateTime.now.strftime("%F %T.%6N")
         self.severity ||= "INFO"
       end
   end
