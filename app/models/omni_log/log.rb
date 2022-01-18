@@ -1,6 +1,6 @@
 module OmniLog
   class Log < ApplicationRecord
-    enum severity: %w(DEBUG ERROR FATAL INFO UNKNOWN WARN)
+    enum :severity, %w(DEBUG ERROR FATAL INFO UNKNOWN WARN), default: :INFO
 
     validates_presence_of :trace_id, :occurred_at
 
@@ -11,7 +11,6 @@ module OmniLog
     private
       def set_initial_attrs
         self.occurred_at ||= DateTime.now.strftime("%F %T.%6N")
-        self.severity ||= "INFO"
       end
   end
 end
