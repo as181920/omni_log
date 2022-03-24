@@ -2,7 +2,11 @@
 通用日志记录(Rails engine)
 
 ## Usage
-How to use my plugin.
+
+Clean data
+```sql
+SELECT drop_chunks('omni_log_api_logs', INTERVAL '3 months');
+```
 
 ## Installation
 Add this line to your application's Gemfile:
