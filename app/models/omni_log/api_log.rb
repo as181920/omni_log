@@ -11,7 +11,7 @@ module OmniLog
 
     private
       def set_initial_attrs
-        self.occurred_at ||= DateTime.now.strftime("%F %T.%6N")
+        self.occurred_at ||= Time.current.strftime("%F %T.%6N")
       end
   end
 end
